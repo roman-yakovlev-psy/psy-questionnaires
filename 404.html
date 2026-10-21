@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Психологический опросник</title>
+  <link rel="stylesheet" href="https://roman-yakovlev-psy.github.io/psy-questionnaires/assets/styles.css">
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    const route = location.pathname.split("/").filter(Boolean).at(-1);
+    const tests = {
+      "pdss": "pdss", "asi-3": "asi3", "dsm5": "dsm5", "gad-7": "gad7",
+      "phq-9": "phq9", "shai": "shai", "isi": "isi", "oci-r": "ocir",
+      "ius-12": "ius12", "docs": "docs"
+    };
+    document.body.dataset.test = tests[route] || "pdss";
+  </script>
+  <script src="https://roman-yakovlev-psy.github.io/psy-questionnaires/assets/app.js"></script>
+</body>
+</html>
